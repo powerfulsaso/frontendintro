@@ -1,0 +1,25 @@
+p {
+    margin: 5;
+}
+
+div {
+    margin-left: 10;
+    margin-right: 10;
+}
+
+#mainBanner {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo personalizado para el thumbnail */
+.custom-thumbnail {
+    width: 150px;
+    height: 105px;
+    object-fit: scale-down;
+}
+
+.color-titulo {
+    color: #9370DB;
+    /* color lavanda */
+}
