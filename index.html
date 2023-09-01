@@ -6,6 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/myStyle.css">
+
     <title>Garage F1</title>
 </head>
 
@@ -111,48 +112,54 @@
         </table>
     </div>
 
-    <!-- <div>
-        <h2>Acelera y deja tu comentario</h2>
-        <article itemscope itemtype="http://schema.org/BlogPosting">
-            <header>
-                <h3 itemprop="headline">El mejor piloto es??</h3>
-                <p><time itemprop="datePublished" datetime="2023-07-06">3 días</time></p>
-                <link itemprop="url" href="?comments=0">
-            </header>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae magnam modi quia sunt rerum facilis
-                saepe quis animi, quo dignissimos vitae maxime sed, sequi laudantium suscipit earum consectetur
-                nesciunt?
-                Maiores!</p>
-            <p>...</p>
-            <footer>
-                <a itemprop="discussionUrl" href="?comments=1">Show comments...</a>
-            </footer>
-        </article>
-    </div> -->
 
 
-    <div class="container">
+
+    <div class="container-fluid">
         <p class="fs-2 fw-bold">Acelera y deja tu comentario</p>
-        <div class="row">
-            <div class="col-lg col-md col-sm">
-                <!-- Contenido de las entradas del blog -->
-                <div class="card mb-3">
-                    <img src="./assets/img/logo.png" class="card-img-top img-thumbnail custom-thumbnail"
-                        alt="Imagen de la entrada 1">
-                    <div class="card-body">
-                        <h5 class="card-title">El mejor piloto</h5>
-                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem asperiores
-                            dolorem consequatur voluptate. Dolor reprehenderit quibusdam excepturi labore, illum
-                            dolorem, veniam, voluptas doloremque sunt magni illo vel ullam. Porro, et!...</p>
-                        <a href="#" class="btn btn-primary">Leer más</a>
-                    </div>
-                </div>
-
-                <!-- Repetir el patrón para otras entradas -->
-            </div>
-
+        <!-- Botón para abrir el modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#entradaModal">
+            Agregar Entrada
+        </button>
+        <br>
+        <br>
+        <div class="col-lg col-md col-sm" id="blog-container">
+            <!-- Contenido de las entradas del blog -->
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="entradaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Entrada al Blog</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulario para ingresar una entrada -->
+                    <form id="entradaForm">
+                        <div class="mb-3">
+                            <label for="titulo" class="form-label">Título</label>
+                            <input type="text" class="form-control" id="titulo" name="titulo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contenido" class="form-label">Contenido</label>
+                            <textarea class="form-control" id="contenido" name="contenido" rows="4" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        id="cerrarModal">Cerrar</button>
+                    <!-- Botón de guardar con un ID asociado -->
+                    <button type="button" class="btn btn-primary" id="guardarEntrada">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <footer class="bg-light text-center py-3">
         <div class="container">
@@ -164,6 +171,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script src="./assets/index.js"></script>
 </body>
 
 
